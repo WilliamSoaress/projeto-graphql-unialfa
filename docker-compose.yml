@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  node:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - sail
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: postgres
+    networks:
+      - sail
+
+networks:
+  sail:
+    driver: bridge

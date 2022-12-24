@@ -1,0 +1,23 @@
+{
+  "name": "graphql_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/api.js",
+    "test": "jest ./test --force-exit",
+    "test-watch": "jest ./test --watch-all",
+    "coverage": "jest ./test --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.6.2",
+    "axios": "^0.25.0",
+    "graphql": "^16.3.0",
+    "jest": "^27.5.0",
+    "nodemon": "^2.0.15",
+    "pg-promise": "^10.11.1"
+  }
+}
